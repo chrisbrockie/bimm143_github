@@ -3,7 +3,7 @@
 My classwork for FA23 in [BIMM143](https://bioboot.github.io/bimm143_F23/) at UC San Diego.
 
 - Class 05: [Intro to GGPLOT](https://github.com/chrisbrockie/bimm143_github/blob/main/class%2005/class05.md).
-- Class 06: [R Functions](https://github.com/chrisbrockie/bimm143_github/blob/main/class%2006/class06.md).
+- Class 06: [R Functions](https://github.com/chrisbrockie/bimm143_github/blob/main/class06/class06.md).
 - Class 07: [Machine Learning 1](https://github.com/chrisbrockie/bimm143_github/blob/main/class%2007/class07.md).
 - Class 08: [Miniproject](https://github.com/chrisbrockie/bimm143_github/blob/main/class%2008/class08.md).
 - Class 09: [Halloween Miniproject](https://github.com/chrisbrockie/bimm143_github/blob/main/class%2009/class09.md).
