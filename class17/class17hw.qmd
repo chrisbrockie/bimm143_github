@@ -1,0 +1,40 @@
+---
+title: "HW Class 17: UNIX Basics"
+author: Christopher Brockie (PID A16280405)
+format: pdf
+---
+
+# Using RStudio to read your output
+
+Read the zebrafish output file:
+```{r}
+zebrafish <- read.table("mm-second.x.zebrafish.tsv", col.names = c("qseqid", "sseqid", "pident", "length", "mismatch", "gapopen", "qstart", "qend", "sstart", "send", "evalue", "bitscore"))
+```
+
+Check to ensure table has been read correctly:
+```{r}
+head(zebrafish)
+```
+
+Make a histogram of the `bitscore` values:
+```{r}
+hist(zebrafish$bitscore, breaks = 30, xlab = "Bitscore", ylab = "Frequency", main = "Histogram of Bitscore Values")
+```
+Most of the `bitscore` values are on the lower side.
+
+`bitscores` are only somewhat related to `pident`; they take into account not only the percent identity but the length of the alignment. This relationship can be estimated by the following napkin sketches:
+```{r}
+library(ggplot2)
+ggplot(zebrafish, aes(pident, bitscore,)) + 
+  geom_point(alpha=0.1) +
+  labs(x="Percent Identity", y="Bitscore")
+```
+
+```{r}
+ggplot(zebrafish, aes((pident * (qend - qstart)), bitscore)) + 
+  geom_point(alpha=0.1) + 
+  geom_smooth() +
+  labs(x="Percent Identity x Length", y="Bitscore")
+```
+
+
